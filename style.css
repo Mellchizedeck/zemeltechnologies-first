@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
@@ -26,7 +26,9 @@ a {
 img {
     height: 100%;
     width: 100%;
+    /*
     object-fit: cover;
+    */
 }
 
 p {
@@ -81,10 +83,46 @@ p {
     color: crimson;
 }
 
+.brand img {
+    opacity: 1.5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    /*transition: 0.4s;*/
+    padding: 30px 6px;
+}
+
+.logo-image-handle {
+    width: 250px;
+    height: 50px;
+    margin-right: 50px;
+    margin-top: 0;
+    opacity: 1.0;
+}
+
+@media screen and (max-width: 500px) {
+    .logo-image-handle {
+        display: block;
+        float: left;
+    }
+    .navbar-brand {
+        display: block;
+        float: none;
+    }
+}
+
 
 /* Header section */
 
-#header {
+
+/*
+nav {
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -93,12 +131,24 @@ p {
     height: auto;
 }
 
-#header .header {
+nav .container {
     min-height: 8vh;
     background-color: rgba(31, 30, 30, 0.24);
     transition: .3s ease background-color;
 }
 
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+
+/*
 #header .nav-bar {
     display: flex;
     align-items: center;
@@ -237,6 +287,7 @@ p {
     background-position: top center;
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 #hero::after {
@@ -252,7 +303,9 @@ p {
 }
 
 #hero .hero {
-    max-width: 1200px;
+    /* 
+   max-width: 1200px;
+   */
     margin: 0 auto;
     padding: 0 50px;
     justify-content: flex-start;
@@ -260,8 +313,11 @@ p {
 
 #hero h1 {
     display: block;
+    width: 100%;
+    /*
     width: fit-content;
-    font-size: 4rem;
+    */
+    font-size: 3.5rem;
     position: relative;
     color: transparent;
     animation: text_reveal .5s ease forwards;
@@ -313,14 +369,20 @@ p {
 #services .services {
     flex-direction: column;
     text-align: center;
+    /*
     max-width: 1500px;
+    */
     margin: 0 auto;
     padding: 100px 0;
+    width: fit-content;
 }
 
 #services .service-top {
+    /*
     max-width: 500px;
+    */
     margin: 0 auto;
+    width: 100%;
 }
 
 #services .service-bottom {
@@ -332,14 +394,19 @@ p {
 }
 
 #services .service-item {
+    /*
     flex-basis: 80%;
+    
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+  
     flex-direction: column;
+    */
+    width: 100%;
+    justify-content: center;
     padding: 30px;
     border-radius: 10px;
-    background-image: url(./img/img-1.png);
+    background-image: url(./img/Zemeltechnologies.png);
     background-size: cover;
     margin: 10px 5%;
     position: relative;
